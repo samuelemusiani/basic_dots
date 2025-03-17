@@ -1,0 +1,90 @@
+// -*- mode: json -*-
+
+{
+	"layer": "bottom",
+	"position": "bottom",
+
+	"modules-left": [
+		"sway/workspaces",
+	],
+	"modules-center": [
+	],
+	"modules-right": [
+		"wireplumber",
+		"network#1",
+		"network#2",
+		"battery",
+		"clock"
+	],
+
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
+
+	"clock": {
+    "interval": 30,
+		"format": "{:%H:%M}",
+    "timezone": "Europe/Rome",
+	},
+
+	"wireplumber": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": " {volume}%",
+		"format-muted": "MUTE",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click-right": "pavucontrol",
+		"on-click": "pamixer -t",
+	},
+	"memory": {
+		"interval": 5,
+		"format": "Mem {}%"
+	},
+	"cpu": {
+		"interval": 5,
+		"on-click": "emacsclient -c -e '(proced)'",
+		"format": "CPU {usage:2}%"
+	},
+	"battery": {
+		"states": {
+			"good": 100,
+			"warning": 20,
+			"critical": 10
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"format-charging": "{capacity}%",
+		"tooltip-format": "{time} - {power}W"
+	},
+	"network#1": {
+		"interface": "wlan0",
+		"format": "{ifname}",
+		"format-wifi": "{essid} ",
+		"format-disconnected": "Disconnected ", //An empty format will hide the module.
+		"tooltip-format": "{ipaddr} - {signalStrength}%",
+		"tooltip-format-disconnected": "",
+		"max-length": 50
+	},
+	"network#2": {
+		"interface": "eth1",
+		"format": "Connected ",
+		"format-disconnected": "",
+		"tooltip-format": "{ipaddr}",
+		"tooltip-format-disconnected": "",
+		"max-length": 50
+	}
+}
+
