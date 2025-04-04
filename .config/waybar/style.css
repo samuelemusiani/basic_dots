@@ -1,12 +1,12 @@
 * {
-	font-size: 12px;
-	font-family: JetBrainsMono, "Font Awesome 6 Brands-Regular-400";
-	font-weight: bold;
+  font-size: 12px;
+  font-family: JetBrainsMono, "Font Awesome 6 Brands-Regular-400";
+  font-weight: bold;
 }
 
 window#waybar {
-	background: #141313;
-	color: #fdf6e3;
+  background: #141313;
+  color: #fdf6e3;
 }
 
 /* #workspaces, */
@@ -23,52 +23,68 @@ window#waybar {
 /* } */
 
 #workspaces button {
-	padding: 0 2px;
-	color: #fdf6e3;
+  padding: 0 2px;
+  color: #fdf6e3;
 }
+
 #workspaces button.focused {
-	color: #268bd2;
+  color: #268bd2;
 }
+
 #workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
+
 #workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
+  background: #1a1a1a;
+  border: #1a1a1a;
+  padding: 0 3px;
 }
 
 #wireplumber {
-	color: #4c84ac;
+  color: #4c84ac;
 }
+
 #memory {
-	color: #2aa198;
+  color: #2aa198;
 }
+
 #cpu {
-	color: #6c71c4;
+  color: #6c71c4;
 }
+
 #battery.good {
-	color: #91A63C;
+  color: #91A63C;
 }
+
 #battery.warning {
-	color: #ffcc00;
+  color: #ffcc00;
 }
+
 #battery.critical {
-	color: #ff0000;
+  color: #ff0000;
 }
+
 #battery.charging {
-	color: #4c84ac;
+  color: #4c84ac;
 }
+
 #disk {
-	color: #b58900;
+  color: #b58900;
 }
+
 #network {
-	color: #7a7ab6;
+  color: #7a7ab6;
 }
+
+#network.vpn_home {
+  color: #8DC270;
+}
+
 #clock {
-	color: #958050;
-	padding: 0 5px;
+  color: #958050;
+  padding: 0 5px;
 }
 
 #wireplumber,
@@ -77,6 +93,5 @@ window#waybar {
 #battery,
 #network,
 #disk {
-	padding: 0 10px;
+  padding: 0 10px;
 }
-

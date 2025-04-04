@@ -11,6 +11,7 @@
 	],
 	"modules-right": [
 		"wireplumber",
+    "network#vpn_home",
 		"network#1",
 		"network#2",
 		"battery",
@@ -81,6 +82,14 @@
 	"network#2": {
 		"interface": "eth1",
 		"format": "Connected ",
+		"format-disconnected": "",
+		"tooltip-format": "{ipaddr}",
+		"tooltip-format-disconnected": "",
+		"max-length": 50
+	},
+	"network#vpn_home": {
+		"interface": "home",
+		"format": "VPN: home",
 		"format-disconnected": "",
 		"tooltip-format": "{ipaddr}",
 		"tooltip-format-disconnected": "",
